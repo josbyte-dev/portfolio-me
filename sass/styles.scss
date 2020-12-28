@@ -1,0 +1,15 @@
+//variables
+$base-color: #A10013;
+$second-color:#233944;
+$gradient-color: linear-gradient(180deg, #A20013 58.88%, #233944 100%);
+$font-titles: 'Numans', sans-serif;
+$font-para: 'Maven Pro', sans-serif;
+
+*  {
+    box-sizing: content-box;
+    font-family: $font-para;
+  }
+
+.header {
+  background-image: url(../images/vector.png);
+}

@@ -1,0 +1,10 @@
+* {
+  box-sizing: content-box;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.header {
+  background-image: url(../images/vector.png);
+}
+
+/*# sourceMappingURL=styles.css.map */
