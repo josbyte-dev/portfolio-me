@@ -1,10 +1,157 @@
 * {
   box-sizing: content-box;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Sansita", sans-serif;
+  margin: 0 auto;
 }
 
-.header {
-  background-image: url(../images/vector.png);
+.title {
+  font-family: "Sansita", sans-serif;
+  color: #1170DF;
+  font-weight: 800;
+}
+
+.subtitles {
+  font-family: "Sansita", sans-serif;
+  color: #1170DF;
+  font-weight: 400;
+}
+
+.write {
+  font-family: "Sansita", sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+/* particulas */
+#particles-js {
+  position: absolute;
+  height: 75%;
+  width: 100%;
+}
+
+/*svg animation*/
+#llave {
+  animation: gravity 1.5s ease-in-out infinite alternate;
+}
+
+#Code, #Image {
+  animation: reverseGR 1.5s ease-in-out infinite alternate;
+}
+
+#Clouds {
+  animation: gravityCC 1s infinite alternate;
+}
+
+@keyframes gravityCC {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(25deg);
+  }
+}
+@keyframes gravity {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+@keyframes reverseGR {
+  from {
+    transform: rotateX(20deg);
+  }
+  to {
+    transform: rotateX(0);
+  }
+}
+.text-content {
+  margin-right: 10rem;
+}
+
+.header .bd-fig {
+  display: none;
+}
+.header .figures {
+  display: none;
+}
+.header .image {
+  display: none;
+}
+.header .name {
+  width: 100%;
+  position: relative;
+  font-size: 10em !important;
+}
+.header .name:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #1170DF;
+  display: inline-block;
+  height: 0.1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+.header .name:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.header .name, .header .subtitle {
+  color: #1170DF;
+  cursor: default;
+}
+.header .hero {
+  position: relative;
+  background-color: transparent;
+}
+
+@media (min-width: 991px) {
+  .header .bd-fig {
+    display: block;
+    width: 100%;
+  }
+  .header .navbar-collapse {
+    width: 35% !important;
+  }
+  .header .content-links {
+    background-color: transparent;
+    width: 100%;
+  }
+  .header .nav-link {
+    color: #1170DF !important;
+  }
+  .header .nav-link:hover {
+    color: #012650 !important;
+  }
+  .header h1 {
+    font-family: "Sansita", sans-serif;
+    color: #1170DF;
+  }
+  .header .figures {
+    display: block;
+    width: 50%;
+  }
+  .header .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+/** particulas **/
+.about-me {
+  position: absolute;
+  background-color: white;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

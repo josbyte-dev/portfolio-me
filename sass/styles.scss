@@ -1,15 +1,179 @@
 //variables
-$base-color: #A10013;
-$second-color:#233944;
+$base-color: #1170DF;
+$hover-base-color: #012650;
+$second-color:#00D5E2;
 $gradient-color: linear-gradient(180deg, #A20013 58.88%, #233944 100%);
-$font-titles: 'Numans', sans-serif;
-$font-para: 'Maven Pro', sans-serif;
+$font: 'Sansita', sans-serif;
 
 *  {
     box-sizing: content-box;
-    font-family: $font-para;
+    font-family: $font;
+    margin: 0 auto;
   }
 
-.header {
-  background-image: url(../images/vector.png);
+.title {
+  font-family: $font;
+  color: $base-color;
+  font-weight: 800;
+} 
+
+.subtitles {
+  font-family: $font;
+  color: $base-color;
+  font-weight: 400;
 }
+
+.write {
+  font-family: $font;
+  color: black;
+  font-weight: 400;
+}
+
+/* particulas */ 
+  
+#particles-js {
+  position: absolute;
+  height: 75%;
+  width: 100%;
+}
+
+/*svg animation*/
+#llave {
+  animation: gravity 1.5s ease-in-out infinite alternate;
+}
+#Code, #Image {
+  animation: reverseGR 1.5s ease-in-out infinite alternate;
+}
+
+#Clouds {
+  animation: gravityCC 1s infinite alternate;
+}
+@keyframes gravityCC {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(25deg);
+  }
+}
+@keyframes gravity {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(20deg);
+  }
+}
+
+@keyframes reverseGR {
+  from {
+    transform: rotateX(20deg);
+  }
+
+  to {
+    transform: rotateX(0);
+  }
+}
+.text-content {
+  margin-right: 10rem;
+}
+.header {
+  .bd-fig {
+    display: none;
+  }
+  .figures {
+    display: none;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .name {
+    width: 100%;
+    position: relative;
+    font-size: 10em !important;
+  }
+  .name:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $base-color;
+    display: inline-block;
+    height: 0.1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 1px;
+    opacity: 0;
+	  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	  transition: opacity 0.35s, transform 0.35s;
+	  -webkit-transform: scale(0,1);
+	  transform: scale(0,1);
+  }
+  .name:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .name, .subtitle {
+    color: $base-color;
+    cursor: default;
+  }
+
+  .hero {
+    position: relative;
+    background-color: transparent;
+  }
+}
+
+
+@media (min-width: 991px) {
+  .header {
+    .bd-fig {
+      display: block;
+      width: 100%;
+    }
+    .navbar-collapse {
+      width: 35% !important;
+    }
+    .content-links {
+      background-color: transparent;
+      width: 100%;
+    }
+    .nav-link {
+      color: $base-color !important;
+    }
+  
+    .nav-link:hover {
+      color:$hover-base-color !important;
+    }
+  
+    h1 {
+     font-family: $font;
+     color: $base-color;
+    }
+    .figures {
+      display: block;
+      width: 50%;
+    }
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+}
+
+/** particulas **/
+
+.about-me {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+}
+
+  
