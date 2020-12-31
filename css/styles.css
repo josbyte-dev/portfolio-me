@@ -1,7 +1,7 @@
 * {
   box-sizing: content-box;
   font-family: "Sansita", sans-serif;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .title {
@@ -11,9 +11,9 @@
 }
 
 .subtitles {
-  font-family: "Sansita", sans-serif;
-  color: #1170DF;
-  font-weight: 400;
+  font-family: "Sansita", sans-serif !important;
+  color: #012650 !important;
+  font-weight: 400 !important;
 }
 
 .write {
@@ -25,7 +25,7 @@
 /* particulas */
 #particles-js {
   position: absolute;
-  height: 75%;
+  height: 110%;
   width: 100%;
 }
 
@@ -34,8 +34,12 @@
   animation: gravity 1.5s ease-in-out infinite alternate;
 }
 
-#Code, #Image {
+#Code {
   animation: reverseGR 1.5s ease-in-out infinite alternate;
+}
+
+#Image {
+  animation: gravity 1s ease-in-out infinite alternate;
 }
 
 #Clouds {
@@ -55,21 +59,17 @@
     transform: rotateX(0);
   }
   to {
-    transform: rotateX(20deg);
+    transform: rotateX(30deg);
   }
 }
 @keyframes reverseGR {
   from {
-    transform: rotateX(20deg);
+    transform: rotateX(35deg);
   }
   to {
     transform: rotateX(0);
   }
 }
-.text-content {
-  margin-right: 10rem;
-}
-
 .header .bd-fig {
   display: none;
 }
@@ -89,7 +89,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #1170DF;
+  background-color: #012650;
   display: inline-block;
   height: 0.1em;
   width: 100%;
@@ -152,6 +152,9 @@
   position: absolute;
   background-color: white;
   width: 100%;
+}
+.about-me .photo {
+  width: 25%;
 }
 
 /*# sourceMappingURL=styles.css.map */

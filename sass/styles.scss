@@ -8,7 +8,7 @@ $font: 'Sansita', sans-serif;
 *  {
     box-sizing: content-box;
     font-family: $font;
-    margin: 0 auto;
+    margin: 0;
   }
 
 .title {
@@ -18,9 +18,9 @@ $font: 'Sansita', sans-serif;
 } 
 
 .subtitles {
-  font-family: $font;
-  color: $base-color;
-  font-weight: 400;
+  font-family: $font !important;
+  color: $hover-base-color !important;
+  font-weight: 400 !important;
 }
 
 .write {
@@ -33,7 +33,7 @@ $font: 'Sansita', sans-serif;
   
 #particles-js {
   position: absolute;
-  height: 75%;
+  height: 110%;
   width: 100%;
 }
 
@@ -41,8 +41,11 @@ $font: 'Sansita', sans-serif;
 #llave {
   animation: gravity 1.5s ease-in-out infinite alternate;
 }
-#Code, #Image {
+#Code {
   animation: reverseGR 1.5s ease-in-out infinite alternate;
+}
+#Image {
+  animation: gravity 1s ease-in-out infinite alternate;
 }
 
 #Clouds {
@@ -63,22 +66,20 @@ $font: 'Sansita', sans-serif;
   }
 
   to {
-    transform: rotateX(20deg);
+    transform: rotateX(30deg);
   }
 }
 
 @keyframes reverseGR {
   from {
-    transform: rotateX(20deg);
+    transform: rotateX(35deg);
   }
 
   to {
     transform: rotateX(0);
   }
 }
-.text-content {
-  margin-right: 10rem;
-}
+
 .header {
   .bd-fig {
     display: none;
@@ -101,7 +102,7 @@ $font: 'Sansita', sans-serif;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: $base-color;
+    background-color: $hover-base-color;
     display: inline-block;
     height: 0.1em;
     width: 100%;
@@ -174,6 +175,10 @@ $font: 'Sansita', sans-serif;
   position: absolute;
   background-color: white;
   width: 100%;
+  
+  .photo {
+    width: 25%;
+  }
 }
 
   
