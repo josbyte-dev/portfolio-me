@@ -111,3 +111,13 @@ particlesJS(
     "retina_detect": true
   }
 );
+
+
+/* TILT */
+function mediaQ() {
+  if (x.matches) {
+    let element = document.getElementById("ph-box");
+    element.classList.remove("photo-tilt")
+  }
+}
+let x = window.matchMedia("(min-width: 585px)")

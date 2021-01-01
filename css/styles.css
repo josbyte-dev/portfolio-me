@@ -20,6 +20,7 @@
   font-family: "Sansita", sans-serif;
   color: black;
   font-weight: 400;
+  font-size: 4ch;
 }
 
 /* particulas */
@@ -70,6 +71,9 @@
     transform: rotateX(0);
   }
 }
+.header {
+  width: 100%;
+}
 .header .bd-fig {
   display: none;
 }
@@ -80,31 +84,9 @@
   display: none;
 }
 .header .name {
-  width: 100%;
-  position: relative;
-  font-size: 10em !important;
-}
-.header .name:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #012650;
-  display: inline-block;
-  height: 0.1em;
-  width: 100%;
-  border-bottom: 1px solid;
-  margin-top: 1px;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-}
-.header .name:hover:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  width: 100% !important;
+  font-size: 15ch !important;
+  text-align: center;
 }
 .header .name, .header .subtitle {
   color: #1170DF;
@@ -147,14 +129,59 @@
     height: 100%;
   }
 }
-/** particulas **/
+.svg-anim {
+  width: 100%;
+  height: 100%;
+}
+
 .about-me {
-  position: absolute;
   background-color: white;
   width: 100%;
 }
+.about-me .title-box {
+  width: 100%;
+}
+.about-me .photo-box {
+  transform-style: preserve-3d;
+  background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+}
 .about-me .photo {
-  width: 25%;
+  object-fit: contain;
+  width: 75%;
+  height: 100%;
+  margin: 2.5em 2.5em;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  z-index: 10;
+}
+.about-me .write-about {
+  width: 100%;
+  text-align: center;
+}
+.about-me .title-about {
+  text-align: center;
+  font-size: 4ch !important;
+}
+
+@media (min-width: 991px) {
+  .about-me .content-info {
+    flex-direction: row !important;
+  }
+  .about-me .title-box {
+    width: 75%;
+  }
+  .about-me .photo {
+    width: 25%;
+    height: 100%;
+  }
+  .about-me .write-about {
+    width: 50%;
+    text-align: right;
+  }
+  .about-me .title-about {
+    font-size: 7ch !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
