@@ -2,8 +2,8 @@
 $base-color: #1170DF;
 $hover-base-color: #012650;
 $second-color:#00D5E2;
-$gradient-color: linear-gradient(180deg, #A20013 58.88%, #233944 100%);
-$font: 'Sansita', sans-serif;
+$gradient-color: linear-gradient(50.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+$font: 'Nunito', sans-serif;
 
 *  {
     box-sizing: content-box;
@@ -13,8 +13,10 @@ $font: 'Sansita', sans-serif;
 
 .title {
   font-family: $font;
-  color: $base-color;
+  background: $gradient-color;
   font-weight: 800;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 } 
 
 .subtitles {
@@ -26,7 +28,7 @@ $font: 'Sansita', sans-serif;
 .write {
   font-family: $font;
   color: black;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 4ch;
 }
 
@@ -34,7 +36,7 @@ $font: 'Sansita', sans-serif;
   
 #particles-js {
   position: absolute;
-  height: 110%;
+  height: 125%;
   width: 100%;
 }
 
@@ -81,6 +83,10 @@ $font: 'Sansita', sans-serif;
   }
 }
 
+.hero-content {
+  height: 50em;
+}
+
 .header {
   width: 100%;
   .bd-fig {
@@ -96,7 +102,7 @@ $font: 'Sansita', sans-serif;
 
   .name {
     width: 100% !important;
-    font-size: 15ch !important;
+    font-size: 5em !important;
     text-align: center;
   }
   .name, .subtitle {
@@ -156,8 +162,13 @@ $font: 'Sansita', sans-serif;
 
 .about-me {
   background-color: white;
-  width: 100%;
-
+  margin: 0 auto;
+  width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+  .padding-about {
+    padding: 5% 0 !important;
+  }
   .title-box {
     width: 100%;
   }
@@ -165,13 +176,16 @@ $font: 'Sansita', sans-serif;
   .photo-box {
     transform-style: preserve-3d;
     background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
   }
 
   .photo {
     object-fit: contain;
-    width: 75%;
-    height: 100%;
-    margin: 2.5em 2.5em;
+    width: 85%;
+    height: 95%;
+    margin: 7%;
     transform-style: preserve-3d;
     transform: translate3d(0,0,75px);
     transition: 0.5s;
@@ -183,22 +197,34 @@ $font: 'Sansita', sans-serif;
     text-align: center;
   }
   .title-about {
+    background: linear-gradient(50.78deg, #1170DF 49.97%, #00D5E2 94.42%);
     text-align: center;
     font-size: 4ch !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 @media (min-width: 991px) {
   .about-me {
+    .padding-about {
+      padding: 10% 0 !important;
+    }
     .content-info {
       flex-direction: row !important;
     }
     .title-box {
       width: 75%;
     }
-    .photo {
+    .photo-box {
       width: 25%;
       height: 100%;
+      margin: 1.5em 3%;
+    }
+    .photo {
+      width: 75%;
+      height: 100%;
+      margin: 12%;
     }
     .write-about {
       width: 50%;
@@ -209,3 +235,20 @@ $font: 'Sansita', sans-serif;
     }
   }
 }  
+
+.what-know {
+  width: 100%;
+  background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+
+  .title-what {
+    color: white !important;
+    text-align: center;
+    padding: 40%;
+    font-family: $font;
+    font-weight: 800;
+  }
+}
+
+.information {
+
+}
