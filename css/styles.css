@@ -6,7 +6,7 @@
 
 .title {
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(50.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+  background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
   font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25,6 +25,16 @@
   font-size: 4ch;
 }
 
+.figures {
+  display: none;
+}
+
+@media (min-width: 991px) {
+  .figures {
+    display: block;
+    width: 50%;
+  }
+}
 /* particulas */
 #particles-js {
   position: absolute;
@@ -83,9 +93,6 @@
 .header .bd-fig {
   display: none;
 }
-.header .figures {
-  display: none;
-}
 .header .image {
   display: none;
 }
@@ -124,10 +131,6 @@
   .header h1 {
     font-family: "Nunito", sans-serif;
     color: #1170DF;
-  }
-  .header .figures {
-    display: block;
-    width: 50%;
   }
   .header .image {
     display: block;
@@ -294,6 +297,137 @@
   to {
     opacity: 1;
   }
+}
+.contact-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  width: 75%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 2em 0;
+}
+.form h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.form h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #012650;
+  opacity: 0.5;
+  text-align: center;
+  width: 100%;
+}
+.form fieldset {
+  width: 100%;
+}
+.form .input-form {
+  width: 85%;
+  margin: 0.5em 1em;
+  border: 0.3px solid rgba(0, 0, 0, 0.24);
+}
+.form textarea {
+  width: 85%;
+  margin: 0.5em 1em;
+  height: 100%;
+  border: 0.3px solid rgba(0, 0, 0, 0.24);
+}
+.form .btn-send {
+  width: 85%;
+  margin: 0.5em 1em;
+  border: 0.5px solid rgba(0, 0, 0, 0.24);
+  padding: 2px;
+  margin-bottom: 1em;
+  transition: 0.5s ease-in-out;
+}
+.form .btn-send:hover {
+  background-color: #1170DF;
+  color: white;
+}
+
+@media (min-width: 991px) {
+  .form {
+    width: 25%;
+  }
+}
+.contact-content {
+  width: 100%;
+  height: 100%;
+}
+
+.h2-contact {
+  margin: 1em 0;
+  text-align: center;
+  position: relative;
+}
+
+.h2-contact::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1.5px;
+  background-color: #012650;
+  right: 5%;
+  top: 50%;
+}
+
+.h2-contact::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1.5px;
+  background-color: #012650;
+  left: 5%;
+  top: 50%;
+}
+
+.h2-message {
+  margin: 1em 0;
+  text-align: center;
+  position: relative;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+}
+.contact-icons .iconify {
+  width: 5em;
+  height: 5em;
+  margin: 1em;
+  transition: 0.5s;
+}
+.contact-icons .insta:hover {
+  color: purple;
+}
+.contact-icons .linkd:hover {
+  color: #0e76a8;
+}
+.contact-icons .git:hover {
+  color: tomato;
+}
+.contact-icons .email:hover {
+  color: palegoldenrod;
+}
+.contact-icons .teleg:hover {
+  color: #40b3e0;
+}
+
+footer {
+  background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
+  margin: 0;
+}
+footer h1 {
+  padding: 2em;
+  margin: 0;
+  color: white;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

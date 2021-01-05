@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">  
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;800&display=swap" rel="stylesheet">
@@ -721,60 +721,104 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="images/pages/Sin título.jpg" style="width:100%">
-              <div class="text">Caption Text</div>
+                <div class="numbertext">1 / 3</div>
+                <img src="images/pages/Sin título.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
             </div>
-          
+
             <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="images/pages/mobile-page.jpg" style="width:100%">
-              <div class="text">Caption Two</div>
+                <div class="numbertext">2 / 3</div>
+                <img src="images/pages/mobile-page.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
             </div>
-          
+
             <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="images/pages/Sin título.jpg" style="width:100%">
-              <div class="text">Caption Three</div>
-            </div>         
+                <div class="numbertext">3 / 3</div>
+                <img src="images/pages/Sin título.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-          <br>
+        </div>
+        <br>
     </section>
     <section class="portfolio">
         <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="images/pages/Sin título.jpg" style="width:100%">
-              <div class="text">Caption Text</div>
+            <div class="mySlides-2 fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/pages/Sin título.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
             </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="images/pages/mobile-page.jpg" style="width:100%">
-              <div class="text">Caption Two</div>
+
+            <div class="mySlides-2 fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/pages/mobile-page.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
             </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="images/pages/Sin título.jpg" style="width:100%">
-              <div class="text">Caption Three</div>
-            </div>         
+
+            <div class="mySlides-2 fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/pages/Sin título.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-          <br>
+        </div>
     </section>
-    <section class="contact"> 
-        
+    <section class="contact">
+        <div class="container p-0 mt-2">
+            <div class="contact-content">
+                <div class="ilustration-contact figures">
+                    <img src="images/amico.png" alt="">
+                </div>
+                <form class="form" id="contact" action="" method="POST">
+                    <h2>contact me</h2>
+                    <h3>Deseas mas informacion, contacta conmigo</h3>
+                    <fieldset>
+                        <input class="input-form" name="name" placeholder="Your first name" type="text" tabindex="1"
+                            required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input class="input-form" name="email" placeholder="Your email" type="email" tabindex="2"
+                            required>
+                    </fieldset>
+                    <fieldset>
+                        <input class="input-form" name="phone" placeholder="Your phone number" type="tel" tabindex="3"
+                            required>
+                    </fieldset>
+                    <fieldset>
+                        <textarea placeholder="Your message..." tabindex="4" required></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <button class="btn-send" type="submit" id="contact-submit"
+                            data-submit="...sending">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <h2 class="h2-contact">or</h2>
+            <h2 class="h2-message">Message me!</h2>
+            <div class="contact-icons">
+                <a class="iconify insta" data-icon="ph:instagram-logo-duotone" data-inline="false"></a>
+                <a class="iconify linkd" data-icon="ph:linkedin-logo-duotone" data-inline="false"></a>
+                <a class="iconify git" data-icon="line-md:github-twotone" data-inline="false"></a>
+                <a class="iconify email" data-icon="line-md:email-twotone-alt" data-inline="false"></a>
+                <a class="iconify teleg" data-icon="cib:telegram" data-inline="false"></a>
+            </div>
+        </div>
     </section>
+    <footer>
+        <h1>powered by <a class="iconify" data-icon="bi:bootstrap" data-inline="false"></a> <span
+                class="fst-italic fw-lighter">bootstrap</span> and
+            <a class="iconify" data-icon="ion:logo-sass" data-inline="false"></a>
+        </h1>
+    </footer>
     <script src="particles.min.js"></script>
     <script src="vanilla-tilt.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="app-js.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".photo-tilt"), {
