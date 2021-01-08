@@ -149,9 +149,3 @@ const seccionesPage = new fullpage('#fullpage', {
   showActiveTooltip: false
 });
 
-
-/* FORMULARIO */
-const send = document.querySelector('#contact-submit');
-send.addEventListener('click', function () {
-  alert("Su mensaje fue enviado");
-}); 

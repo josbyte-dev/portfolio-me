@@ -107,7 +107,7 @@ $font: 'Nunito', sans-serif;
 }
 
 .logo-text{
-  font-size: 4em;
+  font-size: 3em;
   font-family: $font;
   font-weight: 700;
   color: $base-color;
@@ -623,13 +623,13 @@ $font: 'Nunito', sans-serif;
 .carousel {
   h1 {
     margin: 0 auto;
-    width: 60%;
+    width: 95%;
     text-align: center;
     border-bottom: 1px solid $hover-base-color;
     font-weight: 700;
     position: absolute;
-    top: 13%;
-    left: calc(50% - 10em);
+    top: 11%;
+    z-index: 70;
   }
 
   .carousel-item {

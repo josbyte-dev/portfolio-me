@@ -100,7 +100,7 @@
   }
 }
 .logo-text {
-  font-size: 4em;
+  font-size: 3em;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   color: #1170DF;
@@ -613,13 +613,13 @@
 }
 .carousel h1 {
   margin: 0 auto;
-  width: 60%;
+  width: 95%;
   text-align: center;
   border-bottom: 1px solid #012650;
   font-weight: 700;
   position: absolute;
-  top: 13%;
-  left: calc(50% - 10em);
+  top: 11%;
+  z-index: 70;
 }
 .carousel .carousel-item {
   transition: 0.5s ease-in-out;
