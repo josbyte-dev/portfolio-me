@@ -15,40 +15,42 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container fluid w-100 d-flex mb-3 mt-4 justify-content-space-between">
+            <a href="#home" class="navbar-brand">
+                <p class="logo-text">A.R</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navigation collapse navbar-collapse me-0 ms-0" id="navbarNav">
+                <div class="content-links d-flex justify-content-center">
+                    <ul id="menu" class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-me">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyects">proyects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <main id="fullpage">
-        <header id="home" class="section">
+        <header id="home" class="section header">
             <div class="header">
                 <div id="particles-js"></div>
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container fluid w-100 d-flex mb-3 mt-4 justify-content-space-between">
-                        <a href="#" class="navbar-brand">
-                            <p class="logo-text">A.R</p>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navigation collapse navbar-collapse me-0 ms-0" id="navbarNav">
-                            <div class="content-links d-flex justify-content-center">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#proyects">Proyects</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#about-me">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#skills">Skills</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
                 <div class="hero top-0 start-0 end-0">
 
                     <div class="container hero-content mt-3 mb-3 p-0 d-flex justify-content-space-between">
@@ -700,7 +702,7 @@
                 <span id="down" class="iconify" data-icon="bi:arrow-down" data-inline="false"></span>
             </div>
         </section>
-        <section class="section information">
+        <section id="datos" class="section information">
             <div class="container p-0">
                 <div class="card-container">
                     <div class="card">
@@ -755,41 +757,42 @@
                 </div>
             </section>
         </section>
-        <div id="proyects" class="container p-0 section">
+        <section id="proyects" class="container p-0 section">
             <div class="carousel">
                 <h1>Portfolio</h1>
-                <div class="carousel-contenedor">
-                    <button aria-label="Back" class="btn-car-back">
-                        <span class="iconify" data-icon="carbon:chevron-left" data-inline="false"></span>
-                    </button>
-                    <div class="carousel-lista">
-                        <div class="carousel-element">
-                            <img src="images/pages/bootstrap-mobile-page.jpg" alt="">
-                            <p>Landing training page, using bootsrap! </p>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="25000">
+                            <img src="images/pages/bootstrap-mobile-page.jpg" class="d-block w-100" alt="...">
+                            <a href="" target="_blank">SEE PROYECT</a>
                         </div>
-                        <div class="carousel-element">
-                            <img src="images/pages/rohela.jpg" alt="">
-                            <p>Landing page of a sports agency! </p>
+                        <div class="carousel-item" data-bs-interval="25000">
+                            <img src="images/pages/rohela.jpg" class="d-block w-100" alt="...">
+                            <a href="" target="_blank">SEE PROYECT</a>
                         </div>
-                        <div class="carousel-element">
-                            <img src="images/pages/front-end-mentor-grid-challenge.jpg" alt="">
-                            <p>Grid challenge by front end mentor! </p>
+                        <div class="carousel-item">
+                            <img src="images/pages/front-end-mentor-grid-challenge.jpg" class="d-block w-100" alt="...">
+                            <a href="" target="_blank">SEE PROYECT</a>
                         </div>
                     </div>
-                    <button aria-label="Next" class="btn-car-next">
-                        <span class="iconify" data-icon="carbon:chevron-right" data-inline="false"></span>
-                    </button>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
-                <div role="tablist" class="carousel-indicadores"></div>
             </div>
-        </div>
-        <section class="contact section">
+        </section>
+        <section id="contact" class="contact section">
             <div class="container p-0 mt-5">
                 <div class="contact-content">
                     <div class="ilustration-contact figures">
                         <img class="image-contact" src="images/amico.png" alt="">
                     </div>
-                    <form class="form" id="contact" action="" method="POST">
+                    <form class="form" id="contact" action="send.php" method="post">
                         <h2>contact me</h2>
                         <h3>Deseas mas informacion, contacta conmigo</h3>
                         <fieldset>
@@ -805,7 +808,7 @@
                                 tabindex="3" required>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Your message..." tabindex="4" required></textarea>
+                            <textarea name="message" placeholder="Your message..." tabindex="4" required></textarea>
                         </fieldset>
                         <fieldset>
                             <button class="btn-send" type="submit" id="contact-submit"
@@ -816,20 +819,20 @@
                 <h2 class="h2-contact">or</h2>
                 <h2 class="h2-message">Message me!</h2>
                 <div class="contact-icons">
-                    <a class="iconify insta" data-icon="ph:instagram-logo-duotone" data-inline="false"></a>
-                    <a class="iconify linkd" data-icon="ph:linkedin-logo-duotone" data-inline="false"></a>
-                    <a class="iconify git" data-icon="line-md:github-twotone" data-inline="false"></a>
-                    <a class="iconify email" data-icon="line-md:email-twotone-alt" data-inline="false"></a>
-                    <a class="iconify teleg" data-icon="cib:telegram" data-inline="false"></a>
+                    <a href="" class="iconify insta" data-icon="ph:instagram-logo-duotone" data-inline="false"></a>
+                    <a href="" class="iconify linkd" data-icon="ph:linkedin-logo-duotone" data-inline="false"></a>
+                    <a href="" class="iconify git" data-icon="line-md:github-twotone" data-inline="false"></a>
+                    <a href="" class="iconify email" data-icon="line-md:email-twotone-alt" data-inline="false"></a>
+                    <a href="" class="iconify teleg" data-icon="cib:telegram" data-inline="false"></a>
                 </div>
             </div>
 
-            <footer>
+            <div class="footer">
                 <h1>powered by <a class="iconify" data-icon="bi:bootstrap" data-inline="false"></a> <span
                         class="fst-italic fw-lighter">bootstrap</span> and
                     <a class="iconify" data-icon="ion:logo-sass" data-inline="false"></a>
                 </h1>
-            </footer>
+            </div>
         </section>
 
     </main>
@@ -837,7 +840,6 @@
     <script src="js/particles.min.js"></script>
     <script src="js/vanilla-tilt.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="js/glider.min.js"></script>
     <script src="js/fullpage.js"></script>
     <script src="js/app-js.js"></script>
     <script type="text/javascript">

@@ -143,5 +143,15 @@ window.addEventListener('load', function () {
 const seccionesPage = new fullpage('#fullpage', {
   autoScrolling: true,
   fitToSection: false,
-  fitToSectionDelay: 20
+  fitToSectionDelay: 20,
+  navigation: true,
+  menu: '#menu',
+  showActiveTooltip: false
 });
+
+
+/* FORMULARIO */
+const send = document.querySelector('#contact-submit');
+send.addEventListener('click', function () {
+  alert("Su mensaje fue enviado");
+}); 

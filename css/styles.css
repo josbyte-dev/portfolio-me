@@ -2,6 +2,7 @@
   box-sizing: content-box;
   font-family: "Nunito", sans-serif;
   margin: 0;
+  scroll-behavior: smooth !important;
 }
 
 .title {
@@ -99,15 +100,44 @@
   }
 }
 .logo-text {
-  font-size: 3em;
+  font-size: 4em;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   color: #1170DF;
   margin: 0;
+  text-shadow: 0.25rem -0.25rem rgba(255, 0, 255, 0.75), -0.25rem -0.25rem rgba(0, 255, 255, 0.75), 0 0.5rem rgba(255, 255, 0, 0.75);
 }
 
 .hero-content {
   height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 70;
+  top: 0;
+  background-color: white !important;
+  height: 10%;
+}
+
+.navigation {
+  width: 35%;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em !important;
+  color: #1170DF !important;
+}
+
+.nav-link:hover {
+  color: #012650 !important;
+}
+
+.navbar-nav {
+  width: 100%;
 }
 
 .header {
@@ -333,13 +363,6 @@
   .header .content-links {
     background-color: transparent;
     width: 100%;
-  }
-  .header .nav-link {
-    font-size: 1.5em !important;
-    color: #1170DF !important;
-  }
-  .header .nav-link:hover {
-    color: #012650 !important;
   }
   .header .name {
     font-size: 10em !important;
@@ -594,34 +617,36 @@
   text-align: center;
   border-bottom: 1px solid #012650;
   font-weight: 700;
-}
-
-.carousel-contenedor {
-  margin-top: 2em;
-  position: relative;
-}
-.carousel-contenedor .iconify {
-  width: 4em;
-  height: 4em;
-}
-.carousel-contenedor .carousel-element {
-  position: relative;
-}
-.carousel-contenedor .carousel-element img {
-  position: relative;
-}
-.carousel-contenedor .carousel-element p {
-  width: 100%;
   position: absolute;
-  text-align: center;
-  height: 5em;
-  bottom: 1em;
-  background-color: rgba(0, 0, 0, 0.75);
+  top: 13%;
+  left: calc(50% - 10em);
+}
+.carousel .carousel-item {
+  transition: 0.5s ease-in-out;
+}
+.carousel .carousel-item img {
+  position: relative;
+}
+.carousel .carousel-item a {
+  position: absolute;
+  z-index: 70;
+  font-size: 3em;
   color: white;
-  padding-top: 1em;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 3ch;
+  left: calc(50% - 3em);
+  bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: 0.5s ease-in;
+  padding: 0.5em;
+}
+.carousel .carousel-item:hover {
+  transform: scale(1.05);
+}
+.carousel .carousel-item:hover img {
+  filter: blur(1rem);
+}
+.carousel .carousel-item:hover a {
+  opacity: 1;
 }
 
 .btn-car-back, .btn-car-next {
@@ -817,13 +842,13 @@
   color: #40b3e0;
 }
 
-footer {
+.footer {
   background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
   margin: 0;
   position: absolute;
   width: 100%;
 }
-footer h1 {
+.footer h1 {
   padding: 2em;
   margin: 0;
   color: white;
