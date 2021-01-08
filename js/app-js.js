@@ -3,7 +3,7 @@ particlesJS(
   {
     "particles": {
       "number": {
-        "value": 40,
+        "value": 20,
         "density": {
           "enable": true,
           "value_area": 800
@@ -56,7 +56,7 @@ particlesJS(
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 3,
         "direction": "none",
         "random": true,
         "straight": false,
@@ -125,23 +125,23 @@ let x = window.matchMedia("(min-width: 585px)");
 
 /* SLIDES */
 
+window.addEventListener('load', function () {
+  new Glider(document.querySelector('.carousel-lista'), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: '.carousel-indicadores',
+    arrows: {
+      prev: '.btn-car-back',
+      next: '.btn-car-next'
+    }
+  });
+});
 
-let slideIndex = 0;
-showSlides();
+/* FULL PAGE JS */
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let slides2 = document.getElementsByClassName("mySlides-2");
-  for (i = 0; i < slides.length && slides2.length; i++) {
-    slides[i].style.display = "none";
-    slides2[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  if (slideIndex > slides2.length) { slideIndex = 1 }
-  slides2[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
+const seccionesPage = new fullpage('#fullpage', {
+  autoScrolling: true,
+  fitToSection: false,
+  fitToSectionDelay: 20
+});

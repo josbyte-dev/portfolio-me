@@ -59,6 +59,21 @@
   animation: gravityCC 1s infinite alternate;
 }
 
+#down {
+  animation: downup 1.5s ease-in-out infinite;
+}
+
+@keyframes downup {
+  0% {
+    transform: translateY(3em);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3em);
+  }
+}
 @keyframes gravityCC {
   from {
     transform: rotateX(0);
@@ -483,6 +498,14 @@
   font-family: "Nunito", sans-serif;
   font-weight: 800;
 }
+.what-know .iconify {
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  color: white;
+  left: calc(50% - 3em);
+  bottom: 5em;
+}
 
 .information {
   width: 100%;
@@ -565,38 +588,67 @@
     padding-bottom: 2em;
   }
 }
-.slideshow-container {
-  width: 100%;
+.carousel h1 {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  border-bottom: 1px solid #012650;
+  font-weight: 700;
+}
+
+.carousel-contenedor {
+  margin-top: 2em;
   position: relative;
-  margin: auto;
 }
-
-.mySlides {
-  display: none;
+.carousel-contenedor .iconify {
+  width: 4em;
+  height: 4em;
 }
-
-.prev, .next {
-  cursor: pointer;
+.carousel-contenedor .carousel-element {
+  position: relative;
+}
+.carousel-contenedor .carousel-element img {
+  position: relative;
+}
+.carousel-contenedor .carousel-element p {
+  width: 100%;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 0.6em;
+  text-align: center;
+  height: 5em;
+  bottom: 1em;
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 100%;
-  user-select: none;
+  padding-top: 1em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 3ch;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.btn-car-back, .btn-car-next {
+  position: absolute;
+  display: block;
+  width: 4em;
+  height: 4em;
+  border: none;
+  top: calc(50% - 30px);
+  cursor: pointer;
+  line-height: 5em;
+  text-align: center;
+  background: none;
+  color: black;
+  opacity: 30%;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.btn-car-back {
+  left: -6em;
+}
+
+.btn-car-next {
+  right: -6em;
+}
+
+.carousel-lista {
+  overflow: hidden;
 }
 
 .text {
@@ -768,6 +820,8 @@
 footer {
   background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
   margin: 0;
+  position: absolute;
+  width: 100%;
 }
 footer h1 {
   padding: 2em;
