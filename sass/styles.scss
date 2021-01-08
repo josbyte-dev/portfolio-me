@@ -94,12 +94,22 @@ $font: 'Nunito', sans-serif;
   }
 }
 
+.logo-text{
+  font-size: 3em;
+  font-family: $font;
+  font-weight: 700;
+  color: $base-color;
+  margin: 0;
+}
+
 .hero-content {
   height: 100%;
 }
 
 .header {
   width: 100%;
+
+  
   .bd-fig {
     display: none;
   }
@@ -124,7 +134,7 @@ $font: 'Nunito', sans-serif;
   }
 
   .text-margin {
-    margin-top: 10em;
+    margin-top: 2em;
   }
 }
 
@@ -136,8 +146,8 @@ $font: 'Nunito', sans-serif;
 }
 
 .content {
-  position: absolute;
-  bottom: -25%;
+  position: relative;
+  margin-top: 2em;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 160px;
@@ -282,7 +292,7 @@ $font: 'Nunito', sans-serif;
 
 @media (min-width: 700px) {
   .content {
-    width: 50%;
+    width: 75%;
   }
 }
 
@@ -300,6 +310,7 @@ $font: 'Nunito', sans-serif;
       width: 100%;
     }
     .nav-link {
+      font-size: 1.5em !important;
       color: $base-color !important;
     }
   
@@ -509,9 +520,10 @@ $font: 'Nunito', sans-serif;
     }
 
     .icon {
+      width: 100%;
       .iconify {
-        margin: 1em 37%;
-        width: 3em;
+        margin: 1em auto;
+        width: 100%;
         height: 3em;
       }
     }
@@ -527,11 +539,6 @@ $font: 'Nunito', sans-serif;
     .card-content {
       padding: 5em;
 
-      .icon {
-        .iconify {
-          margin: 1em 35%;
-        }
-      }
     }
   }
 }
@@ -706,7 +713,8 @@ $font: 'Nunito', sans-serif;
   .btn-send {
     width: 85%;
     margin: 0.5em 1em;
-    border: 0.5px solid rgba(0, 0, 0, 0.24);
+    background-color: transparent;
+    border: 1.5px solid black;
     padding: 2px;
     margin-bottom: 1em;
     transition: 0.5s ease-in-out;

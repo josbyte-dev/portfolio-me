@@ -83,6 +83,14 @@
     transform: rotateX(0);
   }
 }
+.logo-text {
+  font-size: 3em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #1170DF;
+  margin: 0;
+}
+
 .hero-content {
   height: 100%;
 }
@@ -110,7 +118,7 @@
   background-color: transparent;
 }
 .header .text-margin {
-  margin-top: 10em;
+  margin-top: 2em;
 }
 
 .description-name {
@@ -121,8 +129,8 @@
 }
 
 .content {
-  position: absolute;
-  bottom: -25%;
+  position: relative;
+  margin-top: 2em;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 160px;
@@ -296,7 +304,7 @@
 }
 @media (min-width: 700px) {
   .content {
-    width: 50%;
+    width: 75%;
   }
 }
 @media (min-width: 991px) {
@@ -312,6 +320,7 @@
     width: 100%;
   }
   .header .nav-link {
+    font-size: 1.5em !important;
     color: #1170DF !important;
   }
   .header .nav-link:hover {
@@ -494,9 +503,12 @@
 .information .card-content p {
   text-align: center;
 }
+.information .card-content .icon {
+  width: 100%;
+}
 .information .card-content .icon .iconify {
-  margin: 1em 37%;
-  width: 3em;
+  margin: 1em auto;
+  width: 100%;
   height: 3em;
 }
 
@@ -507,9 +519,6 @@
   }
   .information .card-content {
     padding: 5em;
-  }
-  .information .card-content .icon .iconify {
-    margin: 1em 35%;
   }
 }
 .languagues {
@@ -677,7 +686,8 @@
 .form .btn-send {
   width: 85%;
   margin: 0.5em 1em;
-  border: 0.5px solid rgba(0, 0, 0, 0.24);
+  background-color: transparent;
+  border: 1.5px solid black;
   padding: 2px;
   margin-bottom: 1em;
   transition: 0.5s ease-in-out;
