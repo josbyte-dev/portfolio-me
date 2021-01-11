@@ -32,6 +32,7 @@ $font: 'Nunito', sans-serif;
   color: black;
   font-weight: 300;
   font-size: 4ch;
+  padding: 0.2em 0;
 }
 
 .figures {
@@ -111,10 +112,16 @@ $font: 'Nunito', sans-serif;
   font-family: $font;
   font-weight: 700;
   color: $base-color;
-  margin: 0;
   text-shadow:  0.25rem -0.25rem rgba(magenta, 0.75),
                -0.25rem -0.25rem rgba(cyan, 0.75),
                 0        0.5rem  rgba(yellow, 0.75); 
+}
+
+@media (min-width: 770px) {
+  .logo-text{
+    margin: 0 2em;
+  }
+
 }
 
 .hero-content {
@@ -131,13 +138,25 @@ $font: 'Nunito', sans-serif;
 }
 
 .navigation {
-  width: 35%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+@media (min-width: 770px) {
+  .navigation {
+    display: flex;
+  justify-content: flex-end;
+  }
+}
+.nav-item {
+  text-align: center;
 }
 
 .nav-link {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.5em !important;
+  font-size: 1.2em !important;
   color: $base-color !important;
 }
 
@@ -337,7 +356,7 @@ $font: 'Nunito', sans-serif;
     }
   
     .name {
-      font-size: 10em !important;
+      font-size: 8em !important;
     }
   
     h1 {
@@ -443,8 +462,8 @@ $font: 'Nunito', sans-serif;
   .photo-box {
     transform-style: preserve-3d;
     background: linear-gradient(89.78deg, #1170DF 49.97%, #00D5E2 94.42%);
-    width: 75%;
-    height: 75%;
+    width: 60%;
+    height: 60%;
     margin: 0 auto;
   }
 
@@ -462,13 +481,15 @@ $font: 'Nunito', sans-serif;
   .write-about {
     width: 100%;
     text-align: center;
+    font-size: 3ch !important;
   }
   .title-about {
     background: linear-gradient(50.78deg, #1170DF 49.97%, #00D5E2 94.42%);
     text-align: center;
-    font-size: 4ch !important;
+    font-size: 3ch !important;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: 3em;
   }
 }
 
@@ -520,7 +541,7 @@ $font: 'Nunito', sans-serif;
     width: 5em;
     height: 5em;
     color: white;
-    left: calc(50% - 3em);
+    left: calc(50% - 2em);
     bottom: 5em;
   }
 }
@@ -532,6 +553,29 @@ $font: 'Nunito', sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    padding-bottom: 1.2em;
+
+    h1 {
+      text-align: center;
+      color: $hover-base-color; 
+      font-size: 2ch;
+      padding-top: 5em;
+      position: relative;
+    }
+  
+    h1::after {
+      content: " ";
+      width: 50%;
+      height: 1.5px;
+      position: absolute;
+      background-color: $hover-base-color;
+      left: 25%;
+      bottom: 0;
+    }
+  }
+
+  .cards {
+    display: flex;
   }
 
   .card {
@@ -541,9 +585,10 @@ $font: 'Nunito', sans-serif;
   }
 
   .card-content {
-    padding: 2em;
+    padding: 0;
     p {
       text-align: center;
+      font-size: 1.8ch;
     }
 
     .icon {
@@ -557,19 +602,6 @@ $font: 'Nunito', sans-serif;
   }
 }
 
-@media (min-width: 750px) {
-  .information {
-    .card-container {
-      display: flex;
-      flex-direction: row;
-    }
-    .card-content {
-      padding: 5em;
-
-    }
-  }
-}
-
 .languagues {
   width: 100%;
   background-color: $hover-base-color;
@@ -579,7 +611,7 @@ $font: 'Nunito', sans-serif;
     text-align: center;
     color: white; 
     font-size: 2ch;
-    padding: 5em 0;
+    padding-top: 2em;
     position: relative;
   }
 
@@ -590,13 +622,13 @@ $font: 'Nunito', sans-serif;
     position: absolute;
     background-color: white;
     left: 25%;
-    bottom: 40%;
+    bottom: 0;
   }
 
   .icons {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
 
     .icon {
@@ -612,10 +644,40 @@ $font: 'Nunito', sans-serif;
   }
 }
 
+
+@media (min-width: 750px) {
+  .information {
+    .card-container {
+      display: flex;
+      width: 50%;
+      padding: 12em 0;
+    }
+    .card-content {
+      padding: 0 2em;
+    }
+  }
+
+  .conocimientos-contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .languagues {
+    width: 50%;
+
+    .content-lan {
+      padding: 12em 0;
+    }
+  }
+}
+
+
+
 @media (min-width: 991px){
   .languagues {
     .icons {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       padding-bottom: 2em;
     }
   }
@@ -623,20 +685,23 @@ $font: 'Nunito', sans-serif;
 .carousel {
   h1 {
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     text-align: center;
     border-bottom: 1px solid $hover-base-color;
     font-weight: 700;
     position: absolute;
-    top: 11%;
+    top: 15%;
     z-index: 70;
   }
 
   .carousel-item {
     transition: 0.5s ease-in-out;
+    margin-top: 5em;
 
     img {
       position: relative;
+      object-fit: cover;
+      height: 60vh;
     }
 
     a {
@@ -741,7 +806,7 @@ $font: 'Nunito', sans-serif;
   width: 75%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 2em 0;
+  margin: 0.5em 0;
 
   h2 {
     font-family: $font;
@@ -806,7 +871,7 @@ $font: 'Nunito', sans-serif;
 }
 
 .h2-contact {
-  margin: 1em 0;
+  margin: 0.4em 0;
   text-align: center;
   position: relative;
 }
@@ -832,7 +897,7 @@ $font: 'Nunito', sans-serif;
 }
 
 .h2-message {
-  margin: 1em 0;
+  margin: 0;
   text-align: center;
   position: relative;
 }
@@ -872,9 +937,9 @@ $font: 'Nunito', sans-serif;
   margin: 0;
   position: absolute;
   width: 100%;
-
+  height: 100%;
   h1 {
-    padding: 2em;
+    padding: 1em;
     margin: 0;
     color: white;
     text-align: center;

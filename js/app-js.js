@@ -114,29 +114,31 @@ particlesJS(
 
 
 /* TILT */
-function mediaQ() {
-  if (x.matches) {
+if (matchMedia) {
+  const mq = window.matchMedia("(max-width: 500px)");
+  const mq2 = window.matchMedia("(min-width: 500px)");
+  mq.addListener(WidthChange);
+  mq2.addListener(WidthUp);
+  WidthChange(mq);
+}
+function WidthChange(mq) {
+  if (mq.matches) {
     let element = document.getElementById("ph-box");
-    element.classList.remove("photo-tilt")
+    element.classList.remove("photo-tilt");
   }
 }
-let x = window.matchMedia("(min-width: 585px)");
+
+function WidthUp(mq2) {
+  if (mq2.matches) {
+    let element = document.getElementById("ph-box");
+    element.classList.add('photo-tilt');
+  }
+
+}
+
 
 
 /* SLIDES */
-
-window.addEventListener('load', function () {
-  new Glider(document.querySelector('.carousel-lista'), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-    dots: '.carousel-indicadores',
-    arrows: {
-      prev: '.btn-car-back',
-      next: '.btn-car-next'
-    }
-  });
-});
 
 /* FULL PAGE JS */
 
@@ -146,6 +148,7 @@ const seccionesPage = new fullpage('#fullpage', {
   fitToSectionDelay: 20,
   navigation: true,
   menu: '#menu',
-  showActiveTooltip: false
+  showActiveTooltip: false,
+  responsiveHeight: 410
 });
 
