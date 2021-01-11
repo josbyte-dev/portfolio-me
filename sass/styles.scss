@@ -520,6 +520,7 @@ $font: 'Nunito', sans-serif;
     }
     .title-about {
       font-size: 7ch !important;
+      margin-top: 0;
     }
   }
 }  
@@ -667,7 +668,7 @@ $font: 'Nunito', sans-serif;
     width: 50%;
 
     .content-lan {
-      padding: 12em 0;
+      padding: 15.5em 0 !important;
     }
   }
 }
@@ -707,14 +708,17 @@ $font: 'Nunito', sans-serif;
     a {
       position: absolute;
       z-index: 70;
-      font-size: 3em;
-      color: white;
-      left: calc(50% - 3em);
+      font-size: 2em;
+      font-weight: 700;
+      color: black;
+      left: calc(50% - 3.5em);
       bottom: 10%;
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: rgba(255, 255, 255, 0.50);
       opacity: 0;
       transition: 0.5s ease-in;
       padding: 0.5em;
+      text-decoration: none;
+      border-radius: 3%;
     }
   }
 
@@ -949,4 +953,9 @@ $font: 'Nunito', sans-serif;
 .image-contact {
   width: 60%;
   margin: 0 8em;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: black !important;
+  padding: 0.7em;
 }

@@ -527,6 +527,7 @@
   }
   .about-me .title-about {
     font-size: 7ch !important;
+    margin-top: 0;
   }
 }
 .what-know {
@@ -656,7 +657,7 @@
     width: 50%;
   }
   .languagues .content-lan {
-    padding: 12em 0;
+    padding: 15.5em 0 !important;
   }
 }
 @media (min-width: 991px) {
@@ -687,14 +688,17 @@
 .carousel .carousel-item a {
   position: absolute;
   z-index: 70;
-  font-size: 3em;
-  color: white;
-  left: calc(50% - 3em);
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+  left: calc(50% - 3.5em);
   bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   transition: 0.5s ease-in;
   padding: 0.5em;
+  text-decoration: none;
+  border-radius: 3%;
 }
 .carousel .carousel-item:hover {
   transform: scale(1.05);
@@ -916,6 +920,11 @@
 .image-contact {
   width: 60%;
   margin: 0 8em;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: black !important;
+  padding: 0.7em;
 }
 
 /*# sourceMappingURL=styles.css.map */
