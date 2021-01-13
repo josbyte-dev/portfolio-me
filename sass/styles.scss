@@ -578,6 +578,7 @@ $font: 'Nunito', sans-serif;
 
   .cards {
     display: flex;
+    flex-direction: column;
   }
 
   .card {
@@ -630,7 +631,7 @@ $font: 'Nunito', sans-serif;
   .icons {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
 
     .icon {
