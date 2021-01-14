@@ -668,77 +668,69 @@
     padding-bottom: 2em;
   }
 }
-.carousel h1 {
-  margin: 0 auto;
-  width: 100%;
+.proyects h1 {
   text-align: center;
-  border-bottom: 1px solid #012650;
-  font-weight: 700;
-  position: absolute;
-  top: 15%;
-  z-index: 70;
+  margin: 1em 0;
 }
-.carousel .carousel-item {
-  transition: 0.5s ease-in-out;
-  margin-top: 5em;
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
-.carousel .carousel-item img {
+.proyectos .pic {
   position: relative;
-  object-fit: cover;
-  height: 60vh;
 }
-.carousel .carousel-item a {
-  position: absolute;
-  z-index: 70;
-  font-size: 2em;
-  font-weight: 700;
-  color: black;
-  left: calc(50% - 3.5em);
-  bottom: 10%;
-  background-color: rgba(255, 255, 255, 0.5);
+.proyectos .pic .info-link {
+  transition: 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.25);
   opacity: 0;
-  transition: 0.5s ease-in;
-  padding: 0.5em;
-  text-decoration: none;
-  border-radius: 3%;
 }
-.carousel .carousel-item:hover {
-  transform: scale(1.05);
+.proyectos .pic img {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  transition: 0.5s ease-in-out;
 }
-.carousel .carousel-item:hover img {
-  filter: blur(1rem);
+.proyectos .pic h2 {
+  width: 100%;
+  bottom: 25%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  font-weight: 700;
 }
-.carousel .carousel-item:hover a {
+.proyectos .pic .btn-go {
+  padding: 1em 2em;
+  border: 1.5px solid white;
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  border-radius: 3em;
+  transition: 0.5s ease-in-out;
+}
+.proyectos .pic .btn-go:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  color: #012650;
+}
+.proyectos .pic:hover .info-link {
   opacity: 1;
 }
-
-.btn-car-back, .btn-car-next {
-  position: absolute;
-  display: block;
-  width: 4em;
-  height: 4em;
-  border: none;
-  top: calc(50% - 30px);
-  cursor: pointer;
-  line-height: 5em;
-  text-align: center;
-  background: none;
-  color: black;
-  opacity: 30%;
+.proyectos .pic:hover img {
+  filter: blur(0.5em);
+  transform: scale(1.1);
 }
 
-.btn-car-back {
-  left: -6em;
+@media (min-width: 800px) {
+  .proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proyectos .pic .btn-go {
+    left: 40%;
+  }
 }
-
-.btn-car-next {
-  right: -6em;
-}
-
-.carousel-lista {
-  overflow: hidden;
-}
-
 .text {
   color: #f2f2f2;
   font-size: 15px;
