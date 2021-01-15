@@ -503,9 +503,6 @@
 }
 
 @media (min-width: 991px) {
-  .about-me .padding-about {
-    padding: 10% 0 !important;
-  }
   .about-me .content-info {
     flex-direction: row !important;
   }
@@ -663,7 +660,7 @@
     width: 50%;
   }
   .languagues .content-lan {
-    padding: 10.5em 0 !important;
+    padding-top: 10.5em;
   }
 }
 @media (min-width: 991px) {
@@ -845,11 +842,11 @@
 
 @media (min-width: 770px) {
   .contact-content {
-    margin-top: 6em;
+    margin-top: 2em;
   }
 }
 .h2-contact {
-  margin: 0.4em 0;
+  margin: 0;
   text-align: center;
   position: relative;
 }
@@ -886,7 +883,7 @@
 }
 .contact-icons a {
   width: 4em;
-  height: 5em;
+  height: 4em;
   color: unset !important;
 }
 .contact-icons .iconify {
