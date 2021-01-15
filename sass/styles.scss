@@ -520,7 +520,7 @@ $font: 'Nunito', sans-serif;
       text-align: right;
     }
     .title-about {
-      font-size: 7ch !important;
+      font-size: 5ch !important;
       margin-top: 0;
     }
   }
@@ -653,7 +653,7 @@ $font: 'Nunito', sans-serif;
     .card-container {
       display: flex;
       width: 50%;
-      padding: 12em 0;
+      padding: 7em 0;
     }
     .card-content {
       padding: 0 2em;
@@ -675,7 +675,7 @@ $font: 'Nunito', sans-serif;
     width: 50%;
 
     .content-lan {
-      padding: 15.5em 0 !important;
+      padding: 10.5em 0 !important;
     }
   }
 }
@@ -924,10 +924,14 @@ $font: 'Nunito', sans-serif;
   display: flex;
   justify-content: center;
 
-  .iconify {
-    width: 5em;
+  a {
+    width: 4em;
     height: 5em;
-    margin: 1em;
+    color: unset !important;
+  }
+  .iconify {
+    width: 100%;
+    height: 100%;
     transition: 0.5s;
   }
 

@@ -120,7 +120,8 @@ const seccionesPage = new fullpage('#fullpage', {
   navigation: true,
   menu: '#menu',
   showActiveTooltip: false,
-  responsiveWidth: 700
+  responsiveWidth: 700,
+  responsiveHeight: 645
 });
 
 
