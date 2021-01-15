@@ -135,7 +135,7 @@ $font: 'Nunito', sans-serif;
   z-index: 70;
   top: 0;
   background-color: white !important;
-  height: 10%;
+  height: 8%;
 }
 
 .navigation {
@@ -657,6 +657,11 @@ $font: 'Nunito', sans-serif;
     }
     .card-content {
       padding: 0 2em;
+    }
+
+    .cards {
+      flex-direction: row;
+      margin: 1em 0;
     }
   }
 

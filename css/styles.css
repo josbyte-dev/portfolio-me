@@ -124,7 +124,7 @@
   z-index: 70;
   top: 0;
   background-color: white !important;
-  height: 10%;
+  height: 8%;
 }
 
 .navigation {
@@ -647,6 +647,10 @@
   }
   .information .card-content {
     padding: 0 2em;
+  }
+  .information .cards {
+    flex-direction: row;
+    margin: 1em 0;
   }
 
   .conocimientos-contenedor {
